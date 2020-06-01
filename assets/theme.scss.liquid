@@ -4250,9 +4250,9 @@ $color-blankstate-background: #f4f4f4;
   padding: 10px 0;
   background: $colorNav;
 
-  @include media-query($medium-up) {
-    padding: 30px 0;
-  }
+  //@include media-query($medium-up) {
+  //  padding: 30px 0;
+  //}
 }
 
 .site-header--stuck {
@@ -4649,6 +4649,7 @@ $color-blankstate-background: #f4f4f4;
   .icon-chevron-down {
     width: $desktopMenuChevronSize;
     height: $desktopMenuChevronSize;
+    margin-top: ($desktopMenuChevronSize / 2 * -1)
   }
 }
 
@@ -4659,6 +4660,7 @@ $color-blankstate-background: #f4f4f4;
   padding: ($siteNavItemPadding / 2) $siteNavItemPadding;
   white-space: nowrap;
   color: $colorNavText;
+  text-transform: uppercase;
 
   .site-header--heading-style & {
     @include headerFontStack;
