@@ -1,0 +1,131 @@
+{% if section.settings.divider %}<div class="section--divider">{% endif %}
+
+<div class="page-width">
+
+  {% if section.settings.title != blank %}
+    <header class="section-header">
+      <h2 class="section-header__title">
+        {{ section.settings.title | escape }}
+      </h2>
+    </header>
+  {% endif %}
+
+  <div class="homepage_insta grid grid--uniform"></div>
+</div>
+
+{% if section.settings.divider %}</div>{% endif %}
+
+<style>
+  @media only screen and (max-width: 589px) {
+    .homepage_insta .grid__item {
+    	margin-bottom: 15px;
+  	}
+  }
+</style>
+
+<script>
+    /* Homepage Instagram */
+    var igContainer = document.querySelector('.homepage_insta');
+
+    function populateInstagram(feed) {
+      var data = JSON.parse(localStorage.getItem(feed));
+      if (data === null) {
+        return false;
+      }
+
+      var instagramPosts = data.posts.map(post => {
+        return `
+            <a class="grid__item small--one-third medium-up--one-sixth instagram--square" href="https://www.instagram.com/p/${post.node.shortcode}/" target="_blank">
+				<img  class="w-100 lazyload" 
+                    data-src="${post.node.thumbnail_src}" 
+                    /></a>
+        `;
+      }).join('');
+      igContainer.innerHTML = instagramPosts;
+    }
+
+    function count(key, updateFunc) {
+      var diff = 300000; //5 mins in ms
+      var currentDate = new Date().getTime().toString();
+      var data = JSON.parse(localStorage.getItem(key));
+      if ( data === null ){
+        updateFunc(key);
+        return;
+      }
+      var storedDate = JSON.parse(localStorage.getItem(key)).storedDate;
+      if (currentDate - storedDate > diff) {
+        updateFunc(key);
+        return;
+      }
+      if (igContainer != null){
+        populateInstagram('{{ section.settings.instagram_id }}');
+      }
+    }
+
+    function updateLocalSessionDataIG(key, count, posts) {
+      var storedDate = new Date().getTime().toString();
+      var obj = {count, posts, storedDate}
+      localStorage.setItem(key, JSON.stringify(obj));
+      if (igContainer != null){
+        populateInstagram('{{ section.settings.instagram_id }}');
+      }
+    }
+
+    function updateIg(key) {
+      var igFeedCase = `https://www.instagram.com/${key}/?__a=1`;
+      fetch(igFeedCase)
+        .then(
+          function(response){
+            if (response.status !== 200) {
+              console.log('Instagram error. Status Code: ' + response.status);
+              return;
+            }
+
+            response.json().then(function(data) {
+              var count = data.graphql.user.edge_followed_by.count;
+              var imagePosts = data.graphql.user.edge_owner_to_timeline_media.edges.filter(post => post.node.__typename == 'GraphImage').slice(0,6)
+
+              updateLocalSessionDataIG(key, count, imagePosts);
+            });
+          }
+        )
+        .catch(function(err) {
+          console.log('Instagram error:', err)
+        });
+    }
+
+    count('{{ section.settings.instagram_id }}', updateIg);
+</script>
+
+{% schema %}
+  {
+    "name": "Instagram",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "instagram_id",
+        "label": "Instagram ID",
+        "default": "veeunderwear"
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram",
+        "category": "Social"
+      }
+    ]
+  }
+{% endschema %}
