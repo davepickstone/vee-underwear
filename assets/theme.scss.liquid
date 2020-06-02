@@ -599,6 +599,14 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 
+.grid--insta {
+  margin-left: 0;
+
+  .grid__item {
+    padding-left: 0;
+  }
+}
+
 .grid__item {
   float: left;
   padding-left: $grid-gutter;
@@ -10298,5 +10306,11 @@ iframe.zoid-component-frame {
   display: none;
   @include media-query($medium-up) {
    	display: block; 
+  }
+}
+
+.instagram--square {
+  img {
+    width: 100%;
   }
 }
