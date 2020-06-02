@@ -1374,6 +1374,9 @@ h6 {
       }
     }
   }
+  .subtitle--under {
+    margin-top: 20px;
+  }
 }
 
 /*================ Blog Typography ================*/
@@ -8592,19 +8595,38 @@ a.color-swatch:hover {
 }
 
 .background-media-text__text {
-  text-align: left;
   background: $colorBody;
   padding: $gutter;
   width: 380px;
+}
+
+.background-media-text__text--align-left {
+  text-align: left;
+}
+
+.background-media-text__text--align-center {
+  text-align: center;
+}
+
+.background-media-text__text--align-right {
+  text-align: right;
 }
 
 .background-media-text__text .btn {
   margin-top: $gutter / 2;
 }
 
+.background-image-text--circular {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
 @include media-query($medium-up) {
-  .background-media-text--right .animation-cropper {
-    float: right;
+  .background-media-text--right .background-image-text--circular {
+    margin-left: auto;
   }
 }
 
@@ -8655,7 +8677,7 @@ a.color-swatch:hover {
   .background-media-text--550,
   .background-media-text--550 .background-media-text__image,
   .background-media-text--550 .background-media-text__video {
-    min-height: 550px;
+    min-height: 540px;
   }
   .background-media-text__spacer.background-media-text--650,
   .background-media-text--650,

@@ -67,24 +67,25 @@
     <div class="background-media-text__inner">
       <div class="page-width">
         <div class="background-media-text__aligner background-media-text--{{ section.settings.layout }}">
-          <div class="animation-cropper">
-            <div class="animation-contents">
-              <div class="background-media-text__text larger-text">
-                {% if section.settings.subtitle %}
-                  <p class="subtitle">{{ section.settings.subtitle }}</p>
-                {% endif %}
-                {% if section.settings.title != blank %}
-                  <h2 class="h3">{{ section.settings.title | escape }}</h2>
-                {% endif %}
-                {% if section.settings.text != blank %}
-                  <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
-                {% endif %}
-                {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-                  <a href="{{ section.settings.button_link }}" class="btn">
-                    {{ section.settings.button_label }}
-                  </a>
-                {% endif %}
-              </div>
+          <div class="background-media-text__text background-image-text--circular larger-text background-media-text__text--align-{{ section.settings.text_align }}">
+            <div> 
+              {% if section.settings.subtitle %}
+                <p class="subtitle">{{ section.settings.subtitle }}</p>
+              {% endif %}
+              {% if section.settings.title != blank %}
+                <h2 class="h3">{{ section.settings.title | escape }}</h2>
+              {% endif %}
+              {% if section.settings.text != blank %}
+                <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
+              {% endif %}
+              {% if section.settings.undersubtitle %}
+                <p class="subtitle subtitle--under">{{ section.settings.undersubtitle }}</p>
+              {% endif %}
+              {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+                <a href="{{ section.settings.button_link }}" class="btn">
+                  {{ section.settings.button_label }}
+                </a>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -117,6 +118,11 @@
         "id": "text",
         "label": "Text",
         "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "undersubtitle",
+        "label": "Under heading"
       },
       {
         "type": "text",
@@ -202,6 +208,26 @@
         ]
       },
       {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text align",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },      
+      {
         "type": "range",
         "id": "height",
         "label": "Section height",
@@ -209,7 +235,8 @@
         "min": 450,
         "max": 750,
         "step": 100,
-        "unit": "px"
+        "unit": "px",
+        "info": "Circular styling works best at 550"
       },
       {
         "type": "checkbox",
