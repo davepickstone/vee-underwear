@@ -3558,12 +3558,11 @@ $color-blankstate-background: #f4f4f4;
 
 .site-footer {
   padding-bottom: $gutter;
-  background-color: $colorFooter;
+  background: $colorFooter url({{ "vulva-pattern-512px-10opacity.png" | asset_url | split: '?' | first }});
   color: $colorFooterText;
 
   @include media-query($medium-up) {
-    padding-top: $gutter * 2;
-    padding-bottom: $gutter * 2;
+    padding-top: $gutter;
   }
 
   input,
@@ -3653,8 +3652,8 @@ $color-blankstate-background: #f4f4f4;
   }
 }
 
-.site-footer__bottom-block {
-  padding-bottom: $gutter;
+.footer__copyright {
+  padding: ($gutter / 2) 0;
 }
 
 .footer__clear {
@@ -3705,6 +3704,7 @@ $color-blankstate-background: #f4f4f4;
 
 .footer__newsletter {
   position: relative;
+  background-image: url({{ "vulva-pattern-512px-10opacity.png" | asset_url | split: '?' | first }});
 }
 
 .footer__newsletter-input {
@@ -3861,6 +3861,7 @@ $color-blankstate-background: #f4f4f4;
       -ms-user-select: none;
           user-select: none;
   cursor: default;
+  margin-top: $gutter;
 
   li {
     cursor: default;
@@ -8871,7 +8872,7 @@ $testimonialImageSize: 142px;
 .announcement {
   position: relative;
   overflow: hidden;
-  background: $colorAnnouncement url({{ "vulva-pattern-512px-25opacity.png" | asset_url | split: '?' | first }});
+  background: $colorAnnouncement url({{ "vulva-pattern-512px-10opacity.png" | asset_url | split: '?' | first }});
   color: $colorAnnouncementText;
   max-height: 100px; // reset in JS
   transition: max-height 0.3s cubic-bezier(0, 0, 0.38, 1);;
