@@ -47,29 +47,18 @@
 
         {% case block.type %}
         {% when 'logo_social' %}
-          <div {{ block.shopify_attributes }} class="grid__item small--hide footer__item--{{ block.id }}">
+          <div {{ block.shopify_attributes }} class="grid__item footer__item--social-payment footer__item--{{ block.id }}">
             {% include 'footer-logo-social', block: block, first_instance: true %}
           </div>
         {% when 'custom' %}
           <div {{ block.shopify_attributes }} class="grid__item footer__item--{{ block.id }}">
             {% include 'footer-custom-text', block: block %}
           </div>
-        {% when 'newsletter' %}
-          <div {{ block.shopify_attributes }} class="grid__item footer__mobile__newsletter footer__item--{{ block.id }}">
-            {% include 'footer-newsletter', block: block %}
-          </div>
         {% when 'menu' %}
           <div {{ block.shopify_attributes }} class="grid__item footer__item--{{ block.id }}">
             {% include 'footer-menu', block: block %}
           </div>
         {% endcase %}
-      {% endfor %}
-      {% for block in section.blocks %}
-        {% if block.type == 'logo_social' %}
-          <div class="grid__item medium-up--hide">
-            {% include 'footer-logo-social', block: block %}
-          </div>
-        {% endif %}
       {% endfor %}
     </div>
 
@@ -288,6 +277,10 @@
         "name": "Newsletter",
         "limit": 1,
         "settings": [
+          {
+            "type": "paragraph",
+            "content": "NOT IN USE, REPLACED BY KLAVIYO."
+          },
           {
             "type": "checkbox",
             "id": "show_footer_title",
