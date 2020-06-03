@@ -78,7 +78,7 @@
               {% if section.settings.text != blank %}
                 <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
               {% endif %}
-              {% if section.settings.undersubtitle %}
+              {% if section.settings.undersubtitle != blank %}
                 <p class="subtitle subtitle--under">{{ section.settings.undersubtitle }}</p>
               {% endif %}
               {% if section.settings.button_label != blank and section.settings.button_link != blank %}
@@ -235,8 +235,7 @@
         "min": 450,
         "max": 750,
         "step": 100,
-        "unit": "px",
-        "info": "Circular styling works best at 550"
+        "unit": "px"
       },
       {
         "type": "checkbox",

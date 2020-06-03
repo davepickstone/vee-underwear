@@ -4,7 +4,7 @@
   {% endif %}
 
     <span class="announcement__text{% unless sections.settings.announcement_closable %} announcement__text--open{% endunless %}" data-text="{{ section.settings.announcement_text | strip_html | handle }}">
-      {{ section.settings.announcement_text | strip_html }}
+      {{ section.settings.announcement_text }}
     </span>
 
   {% if section.settings.announcement_link != blank %}
