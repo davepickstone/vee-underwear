@@ -329,7 +329,7 @@ $colorFooterText: {{ settings.color_footer_text | default: '#fff' }};
 // Border colors
 
 $colorBorder: {{ settings.color_borders | default: '#1c1d1d' }};
-$colorBorderGrey: #a7a7a7;
+$colorBorderGrey: #9aa9bb;
 
 // Nav and dropdown link background
 
@@ -1016,7 +1016,7 @@ body {
 hr {
   height: 1px;
   border: 0;
-  border-top: 1px solid $colorBorder;
+  border-top: 1px solid $colorBorderGrey;
 }
 
 .hr--small {
@@ -1705,6 +1705,7 @@ html input[disabled] {
   color: $colorBtnPrimaryText;
   background: $colorBtnPrimary;
   transition: padding-right 0.3s, background 0.3s;
+  text-transform: uppercase;
 
   @include media-query($small) {
     font-size: $btnPrimaryFontSmall;
@@ -1964,7 +1965,7 @@ html input[disabled] {
 }
 
 .collapsible-trigger-btn--borders {
-  border-top: 1px solid $colorBorder;
+  border-top: 1px solid $colorBorderGrey;
 
   .collapsible-content + & {
     margin-top: -1px;
@@ -3581,6 +3582,10 @@ $color-blankstate-background: #f4f4f4;
     font-weight: 600;
   }
 
+  .site-footer__linklist a {
+    text-transform: uppercase;
+  }
+
   input,
   textarea,
   select,
@@ -3726,6 +3731,34 @@ $color-blankstate-background: #f4f4f4;
     * {
       font-family: "brandongrotesque" !important;
     }
+
+    button {
+      text-transform: uppercase;
+      background-color: #9aa9bb !important;
+      font-weight: 600 !important;
+      padding: 9px 20px !important;
+      line-height: 1.42 !important;
+      letter-spacing: 0.025em !important;
+      border-radius: 0 !important;
+    }
+
+    input {
+      border-color: #9aa9bb !important;
+      padding-left: 10px !important;
+      height: 40px !important;
+
+      &[aria-invalid=true] {
+        border-color: rgb(208, 51, 31) !important;
+      }
+
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder,
+      &::placeholder {
+        font-family: "brandongrotesque" !important;
+        color: red !important;
+      }
+    }
   }
 }
 
@@ -3814,8 +3847,8 @@ $color-blankstate-background: #f4f4f4;
     height: 22px;
 
     @include media-query($medium-up) {
-      width: 24px;
-      height: 24px;
+      width: 38px;
+      height: 38px;
     }
 
     &.icon--wide {
@@ -3885,7 +3918,7 @@ $color-blankstate-background: #f4f4f4;
   cursor: default;
 
   @include media-query($medium-up) {
-    margin-top: $gutter;
+    margin-top: 26px;
   }
 
   li {
@@ -5698,7 +5731,7 @@ $collapsible-content-close-transition: transform 0.3s cubic-bezier(.25,.46,.45,.
 // collapsibles-wrapper is an optional wrapper
 
 .collapsibles-wrapper--border-bottom {
-  border-bottom: 1px solid $colorBorder;
+  border-bottom: 1px solid $colorBorderGrey;
 }
 
 .collapsible-trigger {
@@ -5742,7 +5775,7 @@ $collapsible-content-close-transition: transform 0.3s cubic-bezier(.25,.46,.45,.
 }
 
 .collapsible-trigger__icon--circle {
-  border: 1px solid $colorBorder;
+  border: 1px solid $colorBorderGrey;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -6301,6 +6334,7 @@ $slick-opacity-not-active: 0.25;
       &:hover, &:focus {
         &:before {
           opacity: $slick-opacity-on-hover;
+          background-color: $colorBtnPrimary !important;
         }
       }
       &:before {
@@ -6525,7 +6559,7 @@ $shareButtonHeight: 18px;
 }
 
 .section--divider {
-  border-top: 1px solid $colorBorder;
+  border-top: 1px solid $colorBorderGrey;
   padding-top: ($gutter * 0.85);
 }
 
@@ -6542,7 +6576,7 @@ $shareButtonHeight: 18px;
 }
 
 .newsletter-section--with-divider {
-  border-top: 1px solid $colorBorder;
+  border-top: 1px solid $colorBorderGrey;
 }
 
 // Large screen section spacing
@@ -6696,6 +6730,11 @@ $slideshow-dot-size-large: 12px;
     li.slick-active button::before {
       width: $slideshow-dot-size-large;
       height: $slideshow-dot-size-large;
+    }
+
+    li.slick-active button::before {
+      background-color: $colorBtnPrimary;
+      opacity: 1;
     }
   }
 }
@@ -7014,6 +7053,7 @@ $z-index-hero-text: 4;
     width: 60%;
     margin-bottom: 0;
     line-height: 1.2;
+    text-transform: none;
   }
 }
 
