@@ -19,43 +19,11 @@
   data-section-type="collection-switcher"
   data-per-row="{{ per_row }}">
   {% if section.settings.title != blank %}
-    <div class="page-width">
-      <div class="section-header text-center">
-        <div class="larger-text">
-          <p class="subtitle">{{ section.settings.title }}</p>
-        </div>
-        {%- unless collection1.empty? -%}
-          <h3 class="collection-switcher__title">
-            <a href="{{ collection1.url }}"
-              class="collection-switcher__trigger is-active js-no-transition"
-              aria-controls="collection1-{{ section.id }}">
-              {{ collection1.title }}
-            </a>
-          </h3>
-        {%- endunless -%}
-        {%- unless collection2.empty? -%}
-          <h3 class="collection-switcher__title">
-            <a href="{{ collection2.url }}"
-              class="collection-switcher__trigger js-no-transition"
-              aria-controls="collection2-{{ section.id }}">
-              {{ collection2.title }}
-            </a>
-          </h3>
-        {%- endunless -%}
-
-        {%- if emptyState -%}
-          {%- for i in (1..2) -%}
-            <h3 class="collection-switcher__title">
-              <a href="#"
-                class="collection-switcher__trigger js-no-transition{% if i == 1 %} is-active {% endif %}"
-                aria-controls="collection{{ i }}-{{ section.id }}">
-                {{ 'home_page.onboarding.collection_title' | t }} {{ i }}
-              </a>
-            </h3>
-          {%- endfor -%}
-        {%- endif -%}
-      </div>
-    </div>
+    <header class="section-header page-width section-header--collection-switcher">
+      <h3 class="section-header__title">
+        {{ section.settings.title | escape }}
+      </h3>
+    </header>
   {% endif %}
 
   {% assign grid_item_width = 'small--one-half medium-up--one-third' %}

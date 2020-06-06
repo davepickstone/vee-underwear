@@ -371,7 +371,7 @@ $contentTopMarginSmall: 40px;
 
 $sectionHeaderBottom: 30px;
 
-$sectionHeaderBottomSmall: 30px;
+$sectionHeaderBottomSmall: 15px;
 
 // Slideshow colors
 
@@ -4617,6 +4617,13 @@ $color-blankstate-background: #f4f4f4;
   }
 }
 
+.section-header--collection-switcher {
+  margin-bottom: 0;
+  @include media-query($medium-up) {
+    margin-bottom: ($sectionHeaderBottom - 15);
+  }
+}
+
 .section-header--hero {
   position: relative;
   -ms-flex: 1 1 100%;
@@ -6234,7 +6241,7 @@ $slick-opacity-not-active: 0.25;
 
   .icon {
     position: relative;
-    top: 1px;
+    top: 0;
     display: block;
     width: $slick-arrow-icon-width;
     height: $slick-arrow-icon-height;
