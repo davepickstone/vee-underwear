@@ -47,6 +47,7 @@
   {%- assign break2 = per_row | times: 2 -%}
 
   <div class="page-width">
+
     {%- unless collection1.empty? -%}
       <div id="collection1-{{ section.id }}" class="collection-switcher__collection">
         <div
@@ -117,6 +118,7 @@
         </div>
       {%- endfor -%}
     {%- endif -%}
+
   </div>
 </div>
 

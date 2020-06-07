@@ -5981,6 +5981,33 @@ lazySizesConfig.expFactor = 4;
         $(document.documentElement).off('keyup.tab');
       }
     });
+
+    $('.logo-bar').slick({
+      slidesToShow: 8,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1080,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+          }
+        }
+      ]
+    });
   };
 
   theme.setGlobals = function() {

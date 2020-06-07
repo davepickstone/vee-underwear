@@ -3633,7 +3633,11 @@ $color-blankstate-background: #f4f4f4;
 
   @include media-query($medium-down) {
     .grid__item {
-      width: 40%;
+      width: 34%;
+
+      &:nth-of-type(2) {
+        width: 50%;
+      }
     }
   }
 
@@ -3831,7 +3835,7 @@ $color-blankstate-background: #f4f4f4;
 
   li {
     display: block;
-    margin: 0 15px 25px 0;
+    margin: 0 0 25px 0;
 
     @include media-query($medium-up) {
       display: inline-block;
@@ -8552,38 +8556,41 @@ a.color-swatch:hover {
   margin-bottom: $gutter;
 }
 
+@media only screen and (max-width: 1080px) {
+  .logo-bar-flush {
+    padding: 0;
+  }
+}
+
 .logo-bar {
-  text-align: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  // text-align: center;
+  // display: -ms-flexbox;
+  // display: flex;
+  // -ms-flex-align: center;
+  //     align-items: center;
+  // -ms-flex-pack: center;
+  //     justify-content: center;
+  // -ms-flex-wrap: wrap;
+  //     flex-wrap: wrap;
 }
 
 .logo-bar__item {
-  -ms-flex: 0 1 30%;
-      flex: 0 1 30%;
   vertical-align: middle;
-  margin: 30px ($gutter / 2);
-  @include media-query($medium-up) {
-    -ms-flex: 0 1 15%;
-        flex: 0 1 15%;
-    margin: 30px ($gutter / 1.5);
-  }
-  @media only screen and (min-width: 1265px) {
-    -ms-flex: 0 1 8%;
-    flex: 0 1 8%;
-    margin: 30px ($gutter / 1.5);
-  }
+  // margin: 30px ($gutter / 2);
+  // @include media-query($medium-up) {
+  //   margin: 30px ($gutter / 1.5);
+  // }
+  // @media only screen and (min-width: 1265px) {
+  //   margin: 30px ($gutter / 1.5);
+  // }
 }
 
 .logo-bar__image {
   display: block;
   margin: 0 auto;
+  max-width: 130px;
 }
 
 .logo-bar__link {
@@ -10408,7 +10415,7 @@ iframe.zoid-component-frame {
 @include media-query($medium-down) {
   .site-footer {
     .footer__item--social-payment {
-      width: 20%;
+      width: 16%;
 
       .payment-icons {
         display: none;
@@ -10417,6 +10424,10 @@ iframe.zoid-component-frame {
     .mobile-payment-icons {
       display: block;
       padding-bottom: 20px;
+
+      li {
+        margin: 0 2px 0;
+      }
     }
   }
 }

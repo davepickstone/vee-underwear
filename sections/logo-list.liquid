@@ -6,7 +6,7 @@
 
 {% if section.settings.divider %}<div class="section--divider">{% endif %}
 
-<div class="page-full" data-aos="logo__animation" style="background-color:{{ section.settings.bg_color }}">
+<div class="page-full logo-bar-flush" data-aos="logo__animation" style="background-color:{{ section.settings.bg_color }}">
   {% if section.settings.title != blank %}
     <div class="section-header">
       <h3 class="section-header__title">{{ section.settings.title | escape }}</h3>
@@ -22,11 +22,8 @@
           {% endif %}
           {% if block.settings.image != blank %}
             {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-            <img class="logo-bar__image lazyload"
-                data-src="{{ img_url }}"
-                data-widths="[180, 360, 540, 720]"
-                data-aspectratio="{{ block.settings.image.aspect_ratio }}"
-                data-sizes="auto"
+            <img class="logo-bar__image"
+                src="{{ block.settings.image | img_url: '250x' }}"
                 alt="{{ block.settings.image.alt }}">
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
