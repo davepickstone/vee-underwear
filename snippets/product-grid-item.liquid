@@ -52,7 +52,7 @@
       {% endif %}
     {% endif %}
     {% if settings.quick_shop_enable and sold_out == false %}
-      <div class="quick-product__btn js-modal-open-quick-modal-{{ product.id }} small--hide" data-product-id="{{ product.id }}">
+      <div class="quick-product__btn js-modal-open-quick-modal-{{ product.id }}" data-product-id="{{ product.id }}">
         <span class="quick-product__label">{{ settings.quick_shop_text }}</span>
       </div>
     {% endif %}

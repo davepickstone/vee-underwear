@@ -46,6 +46,18 @@
       },
       {
         "type": "color",
+        "id": "color_button_quick",
+        "label": "Buttons (product circles)",
+        "default": "#D48E6F"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text_quick",
+        "label": "Button text (product circles)",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
         "id": "color_sale_price",
         "label": "Sale price",
         "default": "#1c1d1d"

@@ -300,6 +300,10 @@ $colorBtnPrimary: {{ settings.color_button | default: '#000' }};
 
 $colorBtnPrimaryText: {{ settings.color_button_text | default: '#fff' }};
 
+$colorBtnPrimaryQuick: {{ settings.color_button_quick | default: '#000' }};
+
+$colorBtnPrimaryTextQuick: {{ settings.color_button_text_quick | default: '#fff' }};
+
 $colorCartDot: {{ settings.color_cart_dot | default: '#ff4f33' }};
 
 // Text link colors
@@ -7663,20 +7667,24 @@ $collectionHeroSmall: 330px;
   border-bottom: 2px solid currentColor;
 }
 
-// Hide all products except first one to avoid page reflow
+// Hide all products except first one to avoid page reflow (if using slick)
 
-.collection-switcher__collection-grid {
-  .grid__item {
-    display: none;
+// .collection-switcher__collection-grid {
+//   .grid__item {
+//     display: none;
 
-    &:first-child {
-      display: block;
-    }
-  }
+//     &:first-child {
+//       display: block;
+//     }
+//   }
 
-  &.slick-initialized .grid__item {
-    display: block;
-  }
+//   &.slick-initialized .grid__item {
+//     display: block;
+//   }
+// }
+
+.homepage-collection--custom {
+  padding-top: 15px;
 }
 
 // Offset for quick view button
@@ -8076,8 +8084,8 @@ $quick_button_size: 65px;
   border-radius: 50%;
   width: $quick_button_size;
   height: $quick_button_size;
-  background-color: $colorBtnPrimary;
-  color: $colorBtnPrimaryText;
+  background-color: $colorBtnPrimaryQuick;
+  color: $colorBtnPrimaryTextQuick;
   overflow: hidden;
   font-size: em(floor($type_base_size * 0.85));
   line-height: 1.2;
@@ -8085,6 +8093,10 @@ $quick_button_size: 65px;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.15s ease, transform 0.15s ease-out, background 0.3s ease;
+
+  @include media-query($medium-down) {
+    opacity: 1;
+  }
 
   .no-js & {
     display: none;
@@ -8143,6 +8155,14 @@ $quick_button_size: 65px;
         display: inline-block;
         width: 100%;
         margin-right: $page-width-gutter-small;
+      }
+    }
+
+    .homepage-collection--custom {
+      .grid__item {
+        width: 75vw;
+        -ms-flex: 0 0 75vw;
+            flex: 0 0 75vw;
       }
     }
 
