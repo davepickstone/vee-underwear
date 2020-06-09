@@ -3719,6 +3719,7 @@ $color-blankstate-background: #f4f4f4;
 
   p {
     margin-bottom: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
 
   .klaviyo-form-wrapper {
@@ -7062,10 +7063,13 @@ $z-index-hero-text: 4;
 
   p {
     font-size: inherit;
-    width: 60%;
     margin-bottom: 0;
     line-height: 1.2;
     text-transform: none;
+
+    @include media-query($medium-up) {
+      width: 60%;
+    }
   }
 }
 
