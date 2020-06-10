@@ -71,24 +71,25 @@
     <div class="background-media-text__inner">
       <div class="page-width">
         <div class="background-media-text__aligner background-media-text--{{ block.settings.layout }}">
-          <div class="animation-cropper">
-            <div class="animation-contents">
-              <div class="background-media-text__text larger-text">
-                {% if block.settings.subtitle %}
-                  <p class="subtitle">{{ block.settings.subtitle }}</p>
-                {% endif %}
-                {% if block.settings.title != blank %}
-                  <h2 class="h3">{{ block.settings.title | escape }}</h2>
-                {% endif %}
-                {% if block.settings.text != blank %}
-                  <div class="rte background-media-text__subtext">{{ block.settings.text }}</div>
-                {% endif %}
-                {% if block.settings.button_label != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="btn btn--small">
-                    {{ block.settings.button_label }}
-                  </a>
-                {% endif %}
-              </div>
+          <div class="background-media-text__text background-image-text--circular larger-text background-media-text__text--align-{{ block.settings.text_align }}">
+            <div>
+              {% if block.settings.subtitle %}
+                <p class="subtitle">{{ block.settings.subtitle }}</p>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h2 class="h3">{{ block.settings.title | escape }}</h2>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <div class="rte background-media-text__subtext">{{ block.settings.text }}</div>
+              {% endif %}
+              {% if block.settings.undersubtitle != blank %}
+                <p class="subtitle subtitle--under">{{ section.settings.undersubtitle }}</p>
+              {% endif %}
+              {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="btn btn--small">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endif %}
             </div>
           </div>
         </div>
