@@ -333,7 +333,7 @@ $colorFooterText: {{ settings.color_footer_text | default: '#fff' }};
 // Border colors
 
 $colorBorder: {{ settings.color_borders | default: '#1c1d1d' }};
-$colorBorderGrey: #9aa9bb;
+$colorBorderGrey: {{ settings.color_borders | default: '#1c1d1d' }};
 
 // Nav and dropdown link background
 
@@ -3743,7 +3743,7 @@ $color-blankstate-background: #f4f4f4;
 
     button {
       text-transform: uppercase;
-      background-color: #9aa9bb !important;
+      background-color: #414042 !important;
       font-weight: 600 !important;
       padding: 9px 20px !important;
       line-height: 1.42 !important;
@@ -3752,7 +3752,7 @@ $color-blankstate-background: #f4f4f4;
     }
 
     input {
-      border-color: #9aa9bb !important;
+      border-color: #414042 !important;
       padding-left: 10px !important;
       height: 40px !important;
 
@@ -5456,7 +5456,7 @@ $color-blankstate-background: #f4f4f4;
           backface-visibility: hidden;
   transition: background-color 0.1s ease-out;
   z-index: 2;
-  fill: color-control($colorBorderGrey, 1);
+  fill: $colorBorderGrey;
 
   .icon {
     display: block;
