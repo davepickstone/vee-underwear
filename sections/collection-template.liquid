@@ -290,9 +290,11 @@
 </div>
 
 {% assign sp_paginate_by = paginate.page_size %}{% endpaginate %}
-
+<div id="stamped-reviews-widget" data-product-ids="{{ collection.products | map: 'id' | join: ',' }}" data-widget-type="carousel" data-fill-empty="true" data-random="true" data-per-slide="3" data-title="GET THE GOSS" data-auto-play="true" data-limit-words="40" data-auto-play-speed="10000"></div>
+		
 {% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
-  {
+ 
+{
     "name": "Collection pages",
     "settings": [
       {

@@ -11,15 +11,17 @@
   {% endunless %}
 
 <script>
-  setTimeout(function(){
-    fbq("track", "ViewContent", {
-      content_type: "product",
-      content_ids: {{product.selected_or_first_available_variant.id}},
-      value: {{product.selected_or_first_available_variant.price}},
-      content_name: '{{product.title}}',
-      currency: Shopify.currency.active
-    })
-  }, 500);
+  document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(function(){
+      fbq("track", "ViewContent", {
+        content_type: "product",
+        content_ids: {{product.selected_or_first_available_variant.id}},
+        value: {{product.selected_or_first_available_variant.price}},
+        content_name: '{{product.title}}',
+        currency: Shopify.currency.active
+      })
+    }, 1000);
+  });
 </script>
 
   <select name="id" id="ProductSelect-{{ section_id }}" class="product-single__variants no-js">

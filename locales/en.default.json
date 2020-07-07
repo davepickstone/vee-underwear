@@ -133,7 +133,7 @@
   },
   "collections": {
     "general": {
-      "catalog_title": "Catalog",
+      "catalog_title": "",
       "all_of_collection": "View all",
       "view_all_products_html": "View all<br>{{ count }} products",
       "see_more": "Show more",
@@ -322,5 +322,12 @@
   },
   "date_formats": {
     "month_day_year": "%b %d, %Y"
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "cart_does_not_meet_discount_requirements_notice": "To use this code, please add an extra pair of undies to your cart which will be FREE! "
+      }
+    }
   }
 }

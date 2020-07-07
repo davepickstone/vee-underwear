@@ -145,7 +145,7 @@
           {%- endif -%}
         </div>
         {% if settings.enable_product_reviews %}
-          <span class=" stamped-product-reviews-badge" data-product-sku="{{ product.handle }}" data-id="{{ product.id }}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display:block;">{{ product.metafields.stamped.badge }}</span>
+          <a href="{{product.url}}#stamped-main-widget"<span class=" stamped-product-reviews-badge" data-product-sku="{{ product.handle }}" data-id="{{ product.id }}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display:block;">{{ product.metafields.stamped.badge }}</span></a>
 
         {% endif %}
       </div>

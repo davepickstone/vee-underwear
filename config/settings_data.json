@@ -2,9 +2,11 @@
   "current": {
     "color_body_bg": "#ffffff",
     "color_body_text": "#404042",
-    "color_borders": "#9fa792",
-    "color_button": "#9fa792",
+    "color_borders": "#404042",
+    "color_button": "#d48e6f",
     "color_button_text": "#ffffff",
+    "color_button_quick": "#9fa792",
+    "color_button_text_quick": "#fff",
     "color_sale_price": "#9fa792",
     "color_sale_tag": "#9fa792",
     "color_cart_dot": "#fbcece",
@@ -16,15 +18,15 @@
     "color_footer_text": "#fff",
     "color_drawer_background": "#ffffff",
     "color_drawer_text": "#404042",
-    "color_drawer_border": "#e8e8e1",
-    "color_drawer_button": "#9fa792",
+    "color_drawer_border": "#404042",
+    "color_drawer_button": "#d48e6f",
     "color_drawer_button_text": "#ffffff",
     "color_modal_overlays": "#404042",
     "color_image_text": "#fff",
     "color_image_2": "#000000",
     "color_image_2_opacity": 0,
     "color_image_1": "#000000",
-    "color_image_1_opacity": 62,
+    "color_image_1_opacity": 0,
     "color_small_image_bg": "#fff",
     "color_large_image_bg": "#ffffff",
     "type_header_font_family": "roboto_n5",
@@ -144,10 +146,10 @@
           "header_style": "normal",
           "sticky_index": false,
           "sticky_collection": false,
-          "type_navigation_size": 17,
+          "type_navigation_size": 14,
           "type_navigation_style": false,
           "show_announcement": true,
-          "announcement_text": "FREE shipping on all AUS orders during COVID-19",
+          "announcement_text": "<p><strong>FREE<\/strong> shipping on all AUS orders during COVID-19<\/p>",
           "announcement_link": "",
           "announcement_closable": false
         }
@@ -155,20 +157,12 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1494292481350": {
-            "type": "logo_social",
-            "settings": {
-              "logo": "",
-              "desktop_logo_height": 50,
-              "container_width": 20
-            }
-          },
           "1494292485313": {
             "type": "menu",
             "settings": {
               "show_footer_title": false,
-              "menu": "main-menu",
-              "container_width": 20
+              "menu": "main-footer-menu",
+              "container_width": 33
             }
           },
           "1494301487049": {
@@ -176,7 +170,15 @@
             "settings": {
               "show_footer_title": false,
               "menu": "footer",
-              "container_width": 20
+              "container_width": 33
+            }
+          },
+          "1494292481350": {
+            "type": "logo_social",
+            "settings": {
+              "logo": "",
+              "desktop_logo_height": 50,
+              "container_width": 33
             }
           },
           "1587025374157": {
@@ -190,15 +192,18 @@
           }
         },
         "block_order": [
-          "1494292481350",
           "1494292485313",
           "1494301487049",
+          "1494292481350",
           "1587025374157"
         ],
         "settings": {
           "show_locale_selector": false,
           "show_currency_selector": false,
           "show_currency_flags": false,
+          "newsletter_bgcolor": "#d48e6f",
+          "newsletter_title": "Better hoo-ha health ahead (Hallelujah).",
+          "newsletter_text": "<p>Get <strong>10%&nbsp;OFF<\/strong> your first order to kick off the Vee Spree.<\/p>",
           "show_payment_icons": true,
           "show_copyright": true,
           "copyright_text": ""
@@ -210,7 +215,7 @@
           "per_row": 3,
           "collection_image_enable": true,
           "parallax": false,
-          "description_position": "top",
+          "description_position": "bottom",
           "collection_subnav_style": "inline",
           "collection_tags_style": "none",
           "collection_sort_enable": false
@@ -223,7 +228,7 @@
           "social_enable": false,
           "image_size": "medium",
           "thumbnail_position": "beside",
-          "thumbnail_arrows": false,
+          "thumbnail_arrows": true,
           "enable_video_looping": true,
           "product_video_style": "muted"
         }
@@ -253,8 +258,8 @@
       "1566999869051": {
         "type": "featured-collection-switcher",
         "settings": {
-          "title": "",
-          "collection1": "test-collection",
+          "title": "Eco-friendly Bamboo Underwear",
+          "collection1": "eco-friendly-bamboo-underwear",
           "collection2": "",
           "per_row": 3,
           "view_all": false,
@@ -263,98 +268,6 @@
       },
       "product-sections-template": {
         "type": "product-sections-template",
-        "blocks": {
-          "product-image-row": {
-            "type": "image-row",
-            "settings": {
-              "image_1": "",
-              "image_1_link": "",
-              "image_2": "",
-              "image_2_link": "",
-              "image_3": "",
-              "image_3_link": "",
-              "image_4": "",
-              "image_4_link": "",
-              "enable_gutter": false,
-              "enable_zoom": true
-            }
-          },
-          "product-text-and-image": {
-            "type": "text-and-image",
-            "settings": {
-              "image": "",
-              "image_width": 500,
-              "subtitle": "Improved",
-              "title": "Image with text",
-              "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
-              "button_label": "Optional button",
-              "button_link": "",
-              "layout": "left"
-            }
-          },
-          "product-background-image-text": {
-            "type": "background-image-text",
-            "settings": {
-              "subtitle": "Impressive",
-              "title": "Large image with text box",
-              "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
-              "button_label": "",
-              "button_link": "",
-              "image": "",
-              "alignment": "center",
-              "color_border": "#f4f4f4",
-              "layout": "right",
-              "height": 550,
-              "parallax": true
-            }
-          },
-          "product-text-columns": {
-            "type": "text-columns",
-            "settings": {
-              "title": "",
-              "align_text": "left",
-              "enable_image_1": true,
-              "image_1": "",
-              "title_1": "Example title",
-              "text_1": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-              "button_label_1": "",
-              "button_link_1": "",
-              "enable_image_2": true,
-              "image_2": "",
-              "title_2": "Example title",
-              "text_2": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-              "button_label_2": "",
-              "button_link_2": "",
-              "enable_image_3": true,
-              "image_3": "",
-              "title_3": "Example title",
-              "text_3": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-              "button_label_3": "",
-              "button_link_3": ""
-            }
-          },
-          "product-hero-video": {
-            "type": "hero-video",
-            "settings": {
-              "title": "Bring your\nbrand to life.",
-              "title_size": 80,
-              "subheading": "Seamless hero videos",
-              "link_text": "Optional button",
-              "link": "",
-              "text_align": "vertical-bottom horizontal-left",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-              "section_height": "650px",
-              "mobile_height": "auto"
-            }
-          }
-        },
-        "block_order": [
-          "product-image-row",
-          "product-text-and-image",
-          "product-background-image-text",
-          "product-text-columns",
-          "product-hero-video"
-        ],
         "settings": {
           "description_style": "default",
           "social_enable": true,
@@ -374,12 +287,14 @@
               "subtitle": "SNAP. SHARE. TAG",
               "title": "WIN A $100 TOP DRAW OVERHAUL",
               "text": "<p>Next time you catch a cheeky mirror selfie or top draw #shelfie, show it off on Insta and tag #VeeHappy + @veeunderwear for your chance to WIN a wild $100 voucher.&nbsp;<\/p>",
+              "undersubtitle": "",
               "button_label": "INSTA",
               "button_link": "https:\/\/www.instagram.com\/veeunderwear",
               "image": "shopify:\/\/shop_images\/Vee_Social_Images_RGB_3024x1690_34119d6c-19db-404b-84f2-afcbb22ba8ab.jpg",
               "alignment": "center",
               "color_border": "#f4f4f4",
               "layout": "left",
+              "text_align": "center",
               "height": 550,
               "parallax": false
             }
@@ -493,12 +408,12 @@
         "type": "text-and-image",
         "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/Vee_Set-016_Small_Final_3_190k.jpg",
+          "image": "shopify:\/\/shop_images\/Vee_Range_Flatlay_RGB_3024x1690_e2452834-77e0-4827-a3cb-b7f8bb66379b.jpg",
           "image_width": 500,
           "subtitle": "Bundle",
           "title": "5 for $85",
           "text": "<p>Just add the code&nbsp;<strong>5FOR85<\/strong>&nbsp;at check-out to receive&nbsp;a grand discount of $14.75, plus FREE shipping.<\/p>",
-          "button_label": "Shop Now",
+          "button_label": "SHOP NOW",
           "button_link": "shopify:\/\/collections\/test-collection",
           "layout": "left",
           "divider": false
@@ -526,7 +441,7 @@
           "1585975979980-1": {
             "type": "testimonial",
             "settings": {
-              "testimonial": "<p>\"\"I put&nbsp;Vee&nbsp;to the test for my weight sesh &amp; hot yoga workout 🧘🏽&zwj;♀️ Not only&nbsp;were they moisture-wicking and breathable, bamboo is good for the environment.\"<\/p>",
+              "testimonial": "<p>\"I put&nbsp;Vee&nbsp;to the test for my weight sesh &amp; hot yoga workout 🧘🏽&zwj;♀️ Not only&nbsp;were they moisture-wicking and breathable, bamboo is good for the environment.\"<\/p>",
               "image": "shopify:\/\/shop_images\/bamboo_underwear_review_2.png",
               "author": "Alexia E"
             }
@@ -594,8 +509,8 @@
         "settings": {
           "title": "Customer Testimonials",
           "align_text": "left",
-          "round_images": false,
-          "divider": true
+          "round_images": true,
+          "divider": false
         }
       },
       "1585976141480": {
@@ -604,56 +519,56 @@
           "1585976141480-0": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_Urban_List.png",
+              "image": "shopify:\/\/shop_images\/Urban_List_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1585976141480-1": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/logo-fj_c2aef30f-74a1-40b2-9089-321378123968.jpg",
+              "image": "shopify:\/\/shop_images\/Fashion_Journal_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1585976141480-2": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/logo-thedailypretty.jpg",
+              "image": "shopify:\/\/shop_images\/Daily_Pretty_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1586265375516": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_MamaMia.png",
+              "image": "shopify:\/\/shop_images\/Mamamia_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1586265476975": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_Herald_Sun.png",
+              "image": "shopify:\/\/shop_images\/Herald_Sun_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1586265647069": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_The_Age.png",
+              "image": "shopify:\/\/shop_images\/The_Age_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1586265676735": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_Sydney_Morning_Herald.png",
+              "image": "shopify:\/\/shop_images\/SMH_175x100_Reversed_Scaled.png",
               "link": ""
             }
           },
           "1586265762068": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Vee_Underwear_Ten_Daily.png",
+              "image": "shopify:\/\/shop_images\/10_Daily_175x100_Reversed_Scaled.png",
               "link": ""
             }
           }
@@ -671,7 +586,8 @@
         "settings": {
           "title": "",
           "logo_opacity": 80,
-          "divider": false
+          "divider": false,
+          "bg_color": "#404042"
         }
       },
       "list-collections-template": {
@@ -702,7 +618,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/v_underwear_healthy_left.png",
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Healthy_Circle_RGB_100x100px_7c17f360-06e9-4c51-85b0-73015b89bc38.png",
               "title": "Healthy",
               "text": "<p>Made from eco-friendly bamboo which embodies natural properties that make the fabric antibacterial, antifungal, breathable, odour-resistant and moisture-wicking (woah). All these properties help to support a healthy lower region.<\/p>",
               "button_label": "",
@@ -713,7 +629,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/v_underwear_comfortable_left.png",
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Comfort_Circle_RGB_100x100px_88503e2d-3db4-4a03-80c6-ee063089d950.png",
               "title": "Comfortable",
               "text": "<p>We don&rsquo;t believe in tight seams, relieving you of bad undie-symptoms like over-hanging. Best of all, bamboo fabric is soft, super soft. Our fabric also includes a little elastane, for the days you need some extra stretch (we&rsquo;ve all been there).<\/p>",
               "button_label": "",
@@ -724,7 +640,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/v_underwear_sustainable_left.png",
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Sustainable_Circle_RGB_100x100px_73e0eee2-2662-4000-b2cf-c8d69842c902.png",
               "title": "Sustainable",
               "text": "<p>Bamboo requires little water &amp; is the fastest growing plant in the world. Not to brag, but it also has no natural pests, which means it can grow without the use of any pesticides or herbicides. Oh, &amp; it&rsquo;s biodegradable&hellip; okay, now we&rsquo;re bragging.<\/p>",
               "button_label": "",
@@ -748,21 +664,23 @@
         "settings": {
           "subtitle": "BUNDLE",
           "title": "5 for $85",
-          "text": "<p>Just add the code&nbsp;<strong>5FOR85<\/strong>&nbsp;at check-out to receive&nbsp;a grand discount of $14.75, plus FREE shipping.<\/p>",
-          "button_label": "Shop Now",
-          "button_link": "shopify:\/\/collections",
+          "text": "<p>Just add the code&nbsp;<strong>5FOR85<\/strong>&nbsp;at check-out to receive&nbsp;a grand discount of $14.75, plus <strong>FREE<\/strong> shipping.<\/p>",
+          "undersubtitle": "",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/collections\/test-collection",
           "image": "shopify:\/\/shop_images\/Vee_Range_Flatlay_RGB_3024x1690_e2452834-77e0-4827-a3cb-b7f8bb66379b.jpg",
           "focal_point": "center",
-          "color_border": "#f4f4f4",
+          "color_border": "#d48e6f",
           "layout": "left",
-          "height": 450,
+          "text_align": "center",
+          "height": 550,
           "parallax": false
         }
       },
       "1586306584266": {
         "type": "blog-posts",
         "settings": {
-          "title": "Blog Posts",
+          "title": "Vee-Blog",
           "blog": "vee-underwear",
           "post_limit": 3,
           "blog_show_tags": false,
@@ -812,15 +730,218 @@
       "1587355339388": {
         "type": "hero-video",
         "settings": {
-          "title": "Bamboo underwear for a \nhealthier, happier hoo-ha.",
+          "title": "<p>BAMBOO UNDERWEAR FOR A <strong>HEALTHIER, HAPPIER<\/strong> HOO-HA.<\/p>",
           "title_size": 40,
           "subheading": "",
-          "link_text": "Shop Now",
+          "link_text": "SHOP NOW",
           "link": "shopify:\/\/collections\/test-collection",
           "text_align": "vertical-center horizontal-left",
           "video_url": "https:\/\/youtu.be\/1tTxS55tIjI",
           "section_height": "650px",
           "mobile_height": "auto"
+        }
+      },
+      "1591089963595": {
+        "type": "background-image-text",
+        "settings": {
+          "subtitle": "",
+          "title": "",
+          "text": "<p>Want to <strong>WIN<\/strong> a $100 top drawer overhaul? Spread the hoo-ha love on Instagram. Snap, share &amp; tag.<\/p>",
+          "undersubtitle": "@VEEUNDERWEAR #VEEHAPPY",
+          "button_label": "COMPETITION DETS",
+          "button_link": "shopify:\/\/pages\/share-win",
+          "image": "shopify:\/\/shop_images\/Vee_Social_Images_RGB_3024x1690_34119d6c-19db-404b-84f2-afcbb22ba8ab.jpg",
+          "focal_point": "center",
+          "color_border": "#d48e6f",
+          "layout": "left",
+          "text_align": "center",
+          "height": 550,
+          "parallax": false
+        }
+      },
+      "page-faq-template": {
+        "type": "page-faq-template",
+        "blocks": {
+          "page-faq-template-0": {
+            "type": "rich-text",
+            "settings": {
+              "title": "SHIPPING",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "page-faq-template-1": {
+            "type": "question",
+            "settings": {
+              "title": "Where do you ship to?",
+              "text": "<p>We&nbsp;are currently set-up to shimmy out orders Australia&nbsp;wide, pronto. We do offer international shipping&nbsp;for our babes overseas, it's just a touch more spenny.&nbsp;<\/p>"
+            }
+          },
+          "page-faq-template-2": {
+            "type": "question",
+            "settings": {
+              "title": "How long will my order take?",
+              "text": "<p>Your new Vee's will land in your top draw 3 - 7 business days after placing your order.&nbsp;<\/p>"
+            }
+          },
+          "1593908091432": {
+            "type": "question",
+            "settings": {
+              "title": "My order has not arrived?",
+              "text": "<p>Oh no, that is not ideal. There is a savvy tracking code included in the shipping confirmation email we sent you. Butt, if it's been more than 10 business days and your order has not arrived&nbsp;please contact <strong>info@veeunderwear.com<\/strong> and we'll look into it for you.&nbsp;<\/p>"
+            }
+          },
+          "page-faq-template-3": {
+            "type": "rich-text",
+            "settings": {
+              "title": "RETURNS",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "page-faq-template-4": {
+            "type": "question",
+            "settings": {
+              "title": "Do you offer returns?",
+              "text": "<p>Due to hygiene reasons we do not accept returns on underwear.<\/p>\n<p>To ensure you choose&nbsp;the right size, we recommend utilising our fabulous&nbsp;<strong><a href=\"\/pages\/size-guide\">size chart<\/a>.&nbsp;<\/strong><\/p>\n<p>If you&rsquo;re not convinced Vee Underwear are going to be the comfiest, and most overachieving underwear you&rsquo;ll ever wear, you can get the goss and read all Vee&rsquo;s <a href=\"\/pages\/reviews\" title=\"Reviews\"><strong>reviews here.<\/strong><\/a><\/p>\n<p>We take every measure to ensure that our production standards are both ethical and quality assured, checking it once and checking it twice. However, if you do receive a faulty item, please contact us immediately so we can personally resolve the problem.<\/p>\n<p>We know you're going to love your Vee Underwear but if for any reason you have any issues, please do let us know so we can sort it out for you&nbsp;<strong>info@veeunderwear.com<\/strong><\/p>"
+            }
+          },
+          "1593908554207": {
+            "type": "rich-text",
+            "settings": {
+              "title": "PRODUCT & CARE",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1593908569345": {
+            "type": "question",
+            "settings": {
+              "title": "What are the benefits of bamboo fabric?",
+              "text": "<p>Our favourite question - we could go on forever - best to read our&nbsp;<strong><a href=\"https:\/\/veeunderwear.com.au\/pages\/about-bamboo\">about bamboo page.<\/a><\/strong><\/p>"
+            }
+          },
+          "1593908655212": {
+            "type": "question",
+            "settings": {
+              "title": "You're out of stock, help!?",
+              "text": "<p>This is a great problem, it means that there are many happier, healthier hoo-ha&rsquo;s out there. But, not so great if you are wanting to place an order asap! If we are out of stock feel free to pre-order and receive 10% off automatically, and there will be a new order arriving very soon. Feel free to email us at&nbsp;<strong>info@veeunderwear.com<\/strong> with any questions.&nbsp;<\/p>"
+            }
+          },
+          "1593918489534": {
+            "type": "question",
+            "settings": {
+              "title": "How Do I care for my Vee Underwear?",
+              "text": "<p>&nbsp;To get longevity out of your overachieving Vee Underwear it&rsquo;s best to use a lingerie bag and wash on a gentle machine wash setting. You should also use weak\/mild laundry detergents on bamboo fabric. Oh, and don&rsquo;t tumble dry, they don't like that.&nbsp;<\/p>"
+            }
+          },
+          "1593918554393": {
+            "type": "question",
+            "settings": {
+              "title": "How often should I replenish my underwear?",
+              "text": "<p>Research shows that alike sleep and bed wear, underwear has an expiry date before bugs such as E. coli and dust mites start to flourish, leading to an increased risk of UTI&rsquo;s, thrush and allergies...eh. &nbsp;Over time, even Vee's overachieving antibacterial, antifungal and moisture-wicking bamboo fabric powers can't ward off that e-coli&rsquo;s unrelenting wrath. Which is why we recommend replenishing your top draw every 6 &ndash; 12 months.<\/p>"
+            }
+          },
+          "1593917973649": {
+            "type": "rich-text",
+            "settings": {
+              "title": "SIZING",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1593918029783": {
+            "type": "question",
+            "settings": {
+              "title": "How do I know which size to order?",
+              "text": "<p>Vee&rsquo;s pretty true to size (she&rsquo;s good like that). For example, if you were a size 12 pant, you should be a 12 in our undies. We also have a fabulous <a href=\"\/pages\/size-guide\" title=\"Size Guide\"><strong>size chart<\/strong> <\/a>for some extra reassurance if you fancy a double-check.<\/p>"
+            }
+          },
+          "1593917917450": {
+            "type": "question",
+            "settings": {
+              "title": "You don’t have my size?",
+              "text": "<p>&nbsp;As it's still early days for Vee, we don&rsquo;t have the order quantities to stock every size. But please reach out and let us know what size you&rsquo;re after and lets see what we can do <strong>info@veeunderwear.com<\/strong><\/p>"
+            }
+          },
+          "1593918869898": {
+            "type": "rich-text",
+            "settings": {
+              "title": "ECO & ETHICS",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1593918913310": {
+            "type": "question",
+            "settings": {
+              "title": "Where are Vee products manufactured?",
+              "text": "<p>Vee Underwear is brought to you by an Aussie-grown team of Melbourne gals. And our overachieving undies are sustainably and ethically made by our stellar team in China. &nbsp;<\/p>"
+            }
+          },
+          "1593918966892": {
+            "type": "question",
+            "settings": {
+              "title": "How does Vee support the environment and sustainability?",
+              "text": "<p>I don&rsquo;t know if you&rsquo;ve heard, but we use eco-friendly bamboo fabric to make all our products. You can find all the juicy dets on why bamboo is sustainable and how we weave bamboo into our ultra-comfy fabric <a href=\"\/pages\/about-bamboo\" title=\"About Bamboo\"><strong>here.<\/strong><\/a><\/p>\n<p><\/p>\n<p>We also do our vee-ry best to opt for sustainable alternatives wherever possible, from recycled resources to biodegradable packaging.<\/p>"
+            }
+          },
+          "1593921507004": {
+            "type": "rich-text",
+            "settings": {
+              "title": "STOCKISTS & MEDIA",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1593921572499": {
+            "type": "question",
+            "settings": {
+              "title": "I’m interested in becoming a Vee stockist?",
+              "text": "<p>Cool. Drop us a line, we&rsquo;d love to hear from you <strong>info@veeunderwear.com<\/strong><\/p>"
+            }
+          },
+          "1593921625399": {
+            "type": "question",
+            "settings": {
+              "title": "I’m interested in a collaboration?",
+              "text": "<p>All ears. Hit us up <strong>info@veeunderwear.com<\/strong><\/p>"
+            }
+          },
+          "1593921656986": {
+            "type": "question",
+            "settings": {
+              "title": "I've got a PR\/media enquiry?",
+              "text": "<p>Love those. Shoot through an email <strong>info@veeunderwear.com<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "page-faq-template-0",
+          "page-faq-template-1",
+          "page-faq-template-2",
+          "1593908091432",
+          "page-faq-template-3",
+          "page-faq-template-4",
+          "1593908554207",
+          "1593908569345",
+          "1593908655212",
+          "1593918489534",
+          "1593918554393",
+          "1593917973649",
+          "1593918029783",
+          "1593917917450",
+          "1593918869898",
+          "1593918913310",
+          "1593918966892",
+          "1593921507004",
+          "1593921572499",
+          "1593921625399",
+          "1593921656986"
+        ],
+        "settings": {
+          "page_title_enable": false,
+          "page_content_enable": false
         }
       }
     },
@@ -833,6 +954,7 @@
       "1586268284073",
       "1585975872486",
       "1585975979980",
+      "1591089963595",
       "1587169504025",
       "1585976141480",
       "1586306584266",
@@ -1103,7 +1225,7 @@
         "1499790529450": {
           "type": "hero-video",
           "settings": {
-            "title": "Bring your\nbrand to life.",
+            "title": "<p>Bring your\nbrand to life.<\/p>",
             "title_size": 80,
             "subheading": "Seamless hero videos",
             "link_text": "",
@@ -1534,7 +1656,7 @@
         "1499790529450": {
           "type": "hero-video",
           "settings": {
-            "title": "Bring your\nbrand to life.",
+            "title": "<p>Bring your\nbrand to life.<\/p>",
             "title_size": 80,
             "subheading": "Seamless hero videos",
             "link_text": "",
@@ -1894,7 +2016,7 @@
         "1499790529450": {
           "type": "hero-video",
           "settings": {
-            "title": "Bring your\nbrand to life.",
+            "title": "<p>Bring your\nbrand to life.<\/p>",
             "title_size": 80,
             "subheading": "Seamless hero videos",
             "link_text": "",
