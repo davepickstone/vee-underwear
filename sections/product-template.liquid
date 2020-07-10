@@ -1,3 +1,127 @@
+{% comment %}
+If a variant isn't selected in the url, choose a specific size by default if in stock
+Black -> Beige
+12 -> 10 -> 8 -> 14 -> 6 (then others)
+{% endcomment %}
+
+{%- if product.selected_variant == nil -%}
+  {% comment %} 12 {% endcomment %}
+  {%- assign has_selected = false -%}
+  {%- for variant in product.variants -%}
+    {%- if variant.inventory_quantity < 0 -%}
+      {%- continue -%}
+    {%- endif -%}
+    {%- if variant.option1 == "12" and variant.option2 == "Black" -%}
+      {%- assign first_variant_in_stock = variant -%}
+      {%- assign has_selected = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "12" and variant.option2 == "Beige" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {% comment %} 10s {% endcomment %}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "10" and variant.option2 == "Black" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "10" and variant.option2 == "Beige" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {% comment %} 8s {% endcomment %}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "8" and variant.option2 == "Black" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "8" and variant.option2 == "Beige" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {% comment %} 14s {% endcomment %}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "14" and variant.option2 == "Black" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if has_selected == false -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.inventory_quantity < 0 -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- if variant.option1 == "14" and variant.option2 == "Beige" -%}
+        {%- assign first_variant_in_stock = variant -%}
+        {%- assign has_selected = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {% comment %} Then check the rest, 6 and 16 {% endcomment %}
+  {%- for variant in product.variants -%}
+    {%- if has_selected == false and variant.inventory_quantity > 0 -%}
+      {%- assign first_variant_in_stock = variant -%}
+      {%- assign has_selected = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <script>
+    window.location = window.location.origin + window.location.pathname + "?variant={{first_variant_in_stock.id}}"
+  </script>
+{%- endif -%}
+
 {% include 'product-template',
   description_style: section.settings.description_style,
   image_container_width: section.settings.image_size,
