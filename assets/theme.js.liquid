@@ -6186,5 +6186,21 @@ lazySizesConfig.expFactor = 4;
     sections.register('blog', theme.Blog);
     sections.register('photoswipe', theme.Photoswipe);
     sections.register('footer-section', theme.FooterSection);
+
+    if($('#shopify-section-page-faq-template').length > 0){
+      setTimeout(function() {
+        console.log("here")
+        $(window.location.hash).parent().next().find('button').first().click();
+      }, 50);
+    }
+
+    $('.btn-to-size-guide').on('click', function(evt) {
+      evt.preventDefault();
+
+      document.querySelector('#size-guide').scrollIntoView({behavior: "smooth"})
+      if(!document.querySelector('#size-guide').classList.contains('is-open'))
+      document.querySelector('#size-guide').click()
+    });
+    
   });
 })(theme.jQuery);

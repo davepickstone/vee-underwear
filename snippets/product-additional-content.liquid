@@ -23,7 +23,7 @@
         {%- assign include_page_handle = tag | split: '_' -%}
         {%- assign include_page = pages[include_page_handle.last] -%}
         {% if include_page.title != blank %}
-          <button type="button" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height" aria-controls="Product-content-{{ include_page_handle.last }}-{{ section_id }}">
+          <button type="button" id="{{ include_page.title | handleize }}" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height" aria-controls="Product-content-{{ include_page_handle.last }}-{{ section_id }}">
             {{ include_page.title }}
             {% include 'collapsible-icons' %}
           </button>
@@ -49,7 +49,7 @@
     {% endif %}
 {% endcomment %}
     {% if settings.product_content_1 != blank %}
-      <button type="button" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-1-{{ section_id }}">
+      <button type="button" id="{{ pages[settings.product_content_1].title | handleize }}" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-1-{{ section_id }}">
         {{ pages[settings.product_content_1].title }}
         {% include 'collapsible-icons' %}
       </button>
@@ -60,7 +60,7 @@
       </div>
     {% endif %}
     {% if settings.product_content_2 != blank %}
-      <button type="button" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-2-{{ section_id }}">
+      <button type="button" id="{{ pages[settings.product_content_2].title | handleize }}" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-2-{{ section_id }}">
         {{ pages[settings.product_content_2].title }}
         {% include 'collapsible-icons' %}
       </button>
@@ -71,7 +71,7 @@
       </div>
     {% endif %}
     {% if settings.product_content_3 != blank %}
-      <button type="button" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-3-{{ section_id }}">
+      <button type="button" id="{{ pages[settings.product_content_3].title | handleize }}" class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders" aria-controls="Product-content-3-{{ section_id }}">
         {{ pages[settings.product_content_3].title }}
         {% include 'collapsible-icons' %}
       </button>
