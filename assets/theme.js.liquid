@@ -5994,8 +5994,35 @@ lazySizesConfig.expFactor = 4;
       }
     });
 
-    $('.logo-bar').slick({
+    $('.logo-bar--index').slick({
       slidesToShow: 8,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1080,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+          }
+        }
+      ]
+    });
+
+    $('.logo-bar--collection').slick({
+      slidesToShow: 5,
       arrows: false,
       responsive: [
         {
