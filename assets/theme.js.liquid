@@ -1474,7 +1474,19 @@ lazySizesConfig.expFactor = 4;
           value: parseFloat($('.product-single__meta .product__price').first().text().trim().replace('$','')),
           content_name: $('.product-single__meta h1.h2.product-single__title').text().trim(),
           currency: Shopify.currency.active
-        })
+        });
+        
+        pintrk('track', 'addtocart', {
+          value: parseFloat($('.product-single__meta .product__price').first().text().trim().replace('$','')),
+          currency: Shopify.currency.active,
+          order_quantity: parseFloat($('.product__quantity--button .js-qty__num')), 
+          line_items: [
+            { 
+              product_id: $('.product-single__variants').children("option:selected").val(), 
+              product_category: 'Shop' 
+            }
+          ]
+  		});
         
         // Loading indicator on add to cart button
         this.$addToCart.addClass('btn--loading');
