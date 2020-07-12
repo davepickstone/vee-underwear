@@ -2652,10 +2652,15 @@ symbol {
 .drawer__extra {
   text-align: center;
   padding: 16px 0;
+  border-bottom: 1px solid $colorDrawerBorder;
 
   .product__bundle {
     padding-bottom: 8px;
     display: inline-block;
+
+    p {
+      font-size: 16px;
+    }
   }
 
   .cart__afterpay {
@@ -5455,6 +5460,9 @@ $color-blankstate-background: #f4f4f4;
   overflow: visible;
   background-color: $colorInputBg;
   color: color-control($colorInputBg, 1);
+  @include media-query($small) {
+    float: left;
+  }
 
   input {
     border-color: $colorBorderGrey;
@@ -5532,6 +5540,7 @@ $color-blankstate-background: #f4f4f4;
   .js-qty__wrapper {
     background-color: transparent;
     border-color: $colorDrawerBorder;
+    float: none;
   }
 
   .js-qty__num {
@@ -7950,6 +7959,10 @@ $label-bottom-margin: 12px;
 }
 
 .variant-size-guide--mobile {
+  vertical-align: sub;
+  margin-left: 20px;
+  font-size: 14px;
+
   @include media-query($medium-up) {
     display: none;
   }
@@ -7981,7 +7994,7 @@ $label-bottom-margin: 12px;
 .variant-type-color,
 .variant-type-colour {
   display: inline-block; 
-  margin-right: 40px;
+  margin-right: 20px;
   vertical-align: top;
 }
 
@@ -9493,6 +9506,7 @@ div[data-section-type="fading-images"] {
 
   .js-qty__wrapper {
     margin: 0 auto;
+    float: none;
   }
 }
 
@@ -10017,11 +10031,16 @@ iframe.zoid-component-frame {
 
 .product__bundle {
   color: #9ca590;
+  font-weight: 600;
 
   p {
     display: inline !important;
     margin: 0 !important;
-    font-size: inherit;
+    font-size: 13px;
+
+    @include media-query($medium-up) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -10563,3 +10582,9 @@ iframe.zoid-component-frame {
   }
 }
 
+.template-product {
+  .afterpay-paragraph {
+    margin-top: 10px;
+    display: none;
+  }
+}

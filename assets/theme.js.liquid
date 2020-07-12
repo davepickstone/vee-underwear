@@ -6216,10 +6216,16 @@ lazySizesConfig.expFactor = 4;
 
     if($('#shopify-section-page-faq-template').length > 0){
       setTimeout(function() {
-        console.log("here")
         $(window.location.hash).parent().next().find('button').first().click();
       }, 50);
     }
+
+    setTimeout(function() {
+      $('.afterpay-paragraph .afterpay-text1').html('Buy Now, Pay Later with ');
+      $('.afterpay-paragraph .afterpay-instalments').remove();
+      $('.afterpay-paragraph .afterpay-text2').remove();
+      $('.afterpay-paragraph').addClass('show');
+    }, 100);
 
     $('.btn-to-size-guide').on('click', function(evt) {
       evt.preventDefault();
