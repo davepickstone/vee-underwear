@@ -107,7 +107,7 @@
 
             <span id="ProductPrice-{{ section_id }}"
               class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}">
-              {{ current_variant.price | money }} <span class="product__bundle">{{ settings.bundle_text }}</span>
+              {{ current_variant.price | money }} <span class="product__bundle">{{ section.settings.bundle_text }}</span>
             </span>
 
             <div class="product__unit-price product__unit-price-wrapper--{{ section_id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">

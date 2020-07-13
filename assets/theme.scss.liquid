@@ -2660,17 +2660,22 @@ symbol {
 
     p {
       font-size: 13px;
+
+      @include media-query($medium-up) {
+        font-size: 15px;
+      }
     }
   }
 
   .cart__afterpay {
+    display: inline-block;
     p {
       display: inline !important;
       margin: 0 10px 0 0;
       font-size: 10px;
 
       @include media-query($medium-up) {
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   }
@@ -6292,7 +6297,7 @@ $slick-opacity-not-active: 0.25;
   opacity: $slick-opacity-on-hover;
   overflow: hidden;
   border-radius: 50%;
-  z-index: 20;
+  z-index: 5;
 
   &.slick-disabled {
     opacity: 0;
@@ -10603,7 +10608,6 @@ iframe.zoid-component-frame {
 
       @include media-query($small) {
         border-bottom: 1px solid $colorDrawerBorder;
-        text-align: center;
         padding-top: 15px;
         margin-bottom: 35px;
       }
