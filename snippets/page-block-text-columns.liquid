@@ -23,6 +23,14 @@
       {%- assign text_column_count = text_column_count | plus: 1 -%}
     {% endif %}
 
+    {% comment %}
+    Overwrites to force 3 columns
+    {% endcomment %}
+    {%- assign text_column_count = 3 -%}
+    {%- assign column_1_enabled = true -%}
+    {%- assign column_2_enabled = true -%}
+    {%- assign column_3_enabled = true -%}
+
     {% case text_column_count %}
       {% when 1 %}
         {%- assign grid_item_width = '' -%}

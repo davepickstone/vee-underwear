@@ -57,7 +57,7 @@
   {%- endif -%}
 
   {% if section.blocks.size > 0 %}
-    <div class="logo-bar logo-bar--collection logo-bar--{{ section.id }}">
+    <div class="logo-bar logo-bar--collection logo-bar--{{ section.id }}" style="background-color:{{ section.settings.bg_color }}">
       {% for block in section.blocks %}
         <div class="logo-bar__item" {{ block.shopify_attributes }}>
           {% if block.settings.link != blank %}
@@ -416,6 +416,12 @@
         "id": "collection_sort_enable",
         "label": "Show sort options",
         "default": false
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Logo bar background color",
+        "default": "#ffffff"
       }
     ],
     "blocks": [

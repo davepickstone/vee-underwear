@@ -178,7 +178,7 @@
                 {%- assign color_swatch_fallback = value | split: ' ' | last | handle -%}
 
                 <a
-                  href="{{ variant.url | within: collection }}"
+                  href="{{ product.url | within: collection }}"
                   class="color-swatch color-swatch--small"
                   style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};">
                 </a>
