@@ -3574,7 +3574,7 @@ lazySizesConfig.expFactor = 4;
   
         if (variant) {
           // Regular price
-          $(this.selectors.price).html(theme.Currency.formatMoney(variant.price, theme.settings.moneyFormat)).show();
+          $(this.selectors.price + ' .actual-price').html(theme.Currency.formatMoney(variant.price, theme.settings.moneyFormat)).show();
   
           // Sale price, if necessary
           if (variant.compare_at_price > variant.price) {

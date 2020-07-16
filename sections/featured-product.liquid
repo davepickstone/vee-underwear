@@ -103,7 +103,7 @@
 
           <span id="ProductPrice-{{ section.id }}"
             class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}">
-            {{ current_variant.price | money }}
+            <span class="actual-price">{{ current_variant.price | money }}</span>
           </span>
 
           <div class="product__unit-price product__unit-price-wrapper--{{ section.id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
