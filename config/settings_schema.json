@@ -1061,5 +1061,15 @@
         "label": "Show breadcrumbs"
       }
     ]
+  },
+  {
+    "name": "Sale display",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_sale_pricing",
+        "label": "Show sale pricing on homepage and collections"
+      }
+    ]
   }
 ]

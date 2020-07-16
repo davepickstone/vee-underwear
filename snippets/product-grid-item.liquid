@@ -9,6 +9,9 @@
 
 {% comment %}Overwrite{% endcomment %}
 {% assign on_sale = false %}
+{% if settings.show_sale_pricing %}
+  {%- assign on_sale = true -%}
+{% endif %}
 
 {%- assign sold_out = true -%}
 {% if product.available %}
@@ -41,6 +44,7 @@
           {{ 'products.product.sold_out' | t }}
         </div>
       {% endif %}
+      {% comment %}
       {% if on_sale and sold_out == false %}
         {% if settings.product_save_amount %}
           <div class="grid-product__tag grid-product__tag--sale">
@@ -53,6 +57,7 @@
           </div>
         {% endif %}
       {% endif %}
+      {% endcomment %}
     {% endif %}
     {% if settings.quick_shop_enable and sold_out == false %}
       <div class="quick-product__btn js-modal-open-quick-modal-{{ product.id }}" data-product-id="{{ product.id }}">
@@ -133,7 +138,7 @@
           {% endif %}
           {% endcomment %}
           <span {% if on_sale %}class="sale-price"{% endif %}>
-            {{ product.price_max  | money }}
+            {{ product.price_min  | money }}
           </span>
 
           {%- assign product_variant = product.selected_or_first_available_variant -%}
