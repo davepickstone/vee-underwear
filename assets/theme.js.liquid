@@ -3576,6 +3576,11 @@ lazySizesConfig.expFactor = 4;
           // Regular price
           $(this.selectors.price + ' .actual-price').html(theme.Currency.formatMoney(variant.price, theme.settings.moneyFormat)).show();
   
+          $('.afterpay-paragraph .afterpay-text1').html('Buy Now, Pay Later with ');
+      	$('.afterpay-paragraph .afterpay-instalments').remove();
+      $('.afterpay-paragraph .afterpay-text2').remove();
+      $('.afterpay-paragraph').addClass('show');
+          
           // Sale price, if necessary
           if (variant.compare_at_price > variant.price) {
             $(this.selectors.comparePrice).html(theme.Currency.formatMoney(variant.compare_at_price, theme.settings.moneyFormat));

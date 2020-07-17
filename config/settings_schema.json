@@ -835,13 +835,13 @@
         "type": "richtext",
         "id": "bundle_text",
         "label": "Text",
-        "default": "<p>OR BUNDLE 5 FOR $85 AND SAVE $14.75</p>"
+        "default": "<p>OR BUNDLE 5 FOR $85 AND SAVE $14.75<\/p>"
       },
       {
         "type": "richtext",
         "id": "afterpay_text",
         "label": "Text",
-        "default": "<p>Shop Now. Enjoy Now. Pay Later.</p>"
+        "default": "<p>Shop Now. Enjoy Now. Pay Later.<\/p>"
       },
       {
         "type": "select",

@@ -7,15 +7,15 @@
   {%- assign on_sale = true -%}
 {% endif %}
 
+{%- assign sold_out = true -%}
+{% if product.available %}
+  {%- assign sold_out = false -%}
+{% endif %}
+
 {% comment %}Overwrite{% endcomment %}
 {% assign on_sale = false %}
 {% if settings.show_sale_pricing %}
   {%- assign on_sale = true -%}
-{% endif %}
-
-{%- assign sold_out = true -%}
-{% if product.available %}
-  {%- assign sold_out = false -%}
 {% endif %}
 
 {%- assign product_tags = product.tags | join: ',' -%}
@@ -44,7 +44,7 @@
           {{ 'products.product.sold_out' | t }}
         </div>
       {% endif %}
-      {% comment %}
+    	{% comment %}
       {% if on_sale and sold_out == false %}
         {% if settings.product_save_amount %}
           <div class="grid-product__tag grid-product__tag--sale">
@@ -57,7 +57,7 @@
           </div>
         {% endif %}
       {% endif %}
-      {% endcomment %}
+    	{% endcomment %}
     {% endif %}
     {% if settings.quick_shop_enable and sold_out == false %}
       <div class="quick-product__btn js-modal-open-quick-modal-{{ product.id }}" data-product-id="{{ product.id }}">
@@ -122,7 +122,7 @@
         <div class="grid-product__price">
           {% if on_sale %}
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            <span class="grid-product__price--original">{{ product.compare_at_price | money }}</span>
+            <span class="grid-product__price--original">{{ product.compare_at_price_min | money }}</span>
             <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           {% endif %}
           {% comment %}
@@ -183,7 +183,7 @@
                 {%- assign color_swatch_fallback = value | split: ' ' | last | handle -%}
 
                 <a
-                  href="{{ product.url | within: collection }}"
+                  href="{{ variant.url | within: collection }}"
                   class="color-swatch color-swatch--small"
                   style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};">
                 </a>

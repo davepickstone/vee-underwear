@@ -327,6 +327,12 @@
     "checkout": {
       "order_summary": {
         "cart_does_not_meet_discount_requirements_notice": "To use this code, please add an extra pair of undies to your cart which will be FREE! "
+      },
+      "contact": {
+        "city_label": "Suburb"
+      },
+      "field_errors": {
+        "address_city_blank": "Enter a suburb"
       }
     }
   }

@@ -77,6 +77,8 @@
     "product_contact_show_phone": false,
     "enable_product_reviews": true,
     "reviews_layout": "expandable",
+    "bundle_text": "<p>BUNDLE 5 FOR $85 AND SAVE $14.75<\/p>",
+    "afterpay_text": "<p>Shop Now. Enjoy Now. Pay Later.<\/p>",
     "cart_type": "drawer",
     "cart_icon": "cart",
     "cart_additional_buttons": false,
@@ -211,11 +213,56 @@
       },
       "collection-template": {
         "type": "collection-template",
+        "blocks": {
+          "1594714477544": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/breathable.png",
+              "link": ""
+            }
+          },
+          "1594714484981": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/antibacterial.png",
+              "link": ""
+            }
+          },
+          "1594714490988": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/antifungal.png",
+              "link": ""
+            }
+          },
+          "1594714497356": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/moisture-wicking.png",
+              "link": ""
+            }
+          },
+          "1594714504037": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/odour-resistant.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1594714477544",
+          "1594714484981",
+          "1594714490988",
+          "1594714497356",
+          "1594714504037"
+        ],
         "settings": {
+          "title": "Eco-friendly Bamboo Underwear",
           "per_row": 3,
           "collection_image_enable": true,
           "parallax": false,
-          "description_position": "bottom",
+          "description_position": "hide",
           "collection_subnav_style": "none",
           "collection_tags_style": "none",
           "collection_sort_enable": false
@@ -224,6 +271,7 @@
       "product-template": {
         "type": "product-template",
         "settings": {
+          "bundle_text": "<p>OR BUNDLE 5 FOR $85 AND SAVE $14.75<\/p>",
           "description_style": "default",
           "social_enable": false,
           "image_size": "medium",
@@ -323,11 +371,37 @@
               "button_label_3": "",
               "button_link_3": ""
             }
+          },
+          "1594765813741": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "left",
+              "enable_image_1": true,
+              "image_1": "shopify:\/\/shop_images\/Screen_Shot_2020-07-15_at_8.25.54_am.png",
+              "title_1": "JUNE",
+              "text_1": "<p>The softest and comfiest bamboo underwear ever&nbsp;<a href=\"https:\/\/www.instagram.com\/veeunderwear\/\">@veeunderwear<\/a>&nbsp;I could not recommend them more 😍 #VeeHappy<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": false,
+              "image_2": "",
+              "title_2": "",
+              "text_2": "",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
           }
         },
         "block_order": [
           "page-background-image-text",
-          "page-text-columns"
+          "page-text-columns",
+          "1594765813741"
         ],
         "settings": {
           "page_title_enable": false,
@@ -942,6 +1016,72 @@
         "settings": {
           "page_title_enable": false,
           "page_content_enable": false
+        }
+      },
+      "collection-text-columns": {
+        "type": "collection-text-columns",
+        "blocks": {
+          "1594714328744": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Healthy_Circle_RGB_100x100px_7c17f360-06e9-4c51-85b0-73015b89bc38.png",
+              "title": "Healthy",
+              "text": "<p>Made from eco-friendly bamboo which embodies natural properties that make the fabric antibacterial, antifungal, breathable, odour-resistant and moisture-wicking (woah). All these properties help to support a healthy lower region.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1594714350735": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Comfort_Circle_RGB_100x100px_88503e2d-3db4-4a03-80c6-ee063089d950.png",
+              "title": "Comfortable",
+              "text": "<p>We don&rsquo;t believe in tight seams, relieving you of bad undie-symptoms like over-hanging. Best of all, bamboo fabric is soft, super soft. Our fabric also includes a little elastane, for the days you need some extra stretch (we&rsquo;ve all been there).<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1594714375600": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Sustainable_Circle_RGB_100x100px_73e0eee2-2662-4000-b2cf-c8d69842c902.png",
+              "title": "Sustainable",
+              "text": "<p>Bamboo requires little water &amp; is the fastest growing plant in the world. Not to brag, but it also has no natural pests, which means it can grow without the use of any pesticides or herbicides. Oh, &amp; it&rsquo;s biodegradable&hellip; okay, now we&rsquo;re bragging.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1594714328744",
+          "1594714350735",
+          "1594714375600"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left",
+          "divider": false
+        }
+      },
+      "collection-background-image-text": {
+        "type": "collection-background-image-text",
+        "settings": {
+          "subtitle": "BUNDLE",
+          "title": "5 for $85",
+          "text": "<p>Just add the code&nbsp;<strong>5FOR85<\/strong>&nbsp;at check-out to receive&nbsp;a grand discount of $14.75, plus&nbsp;<strong>FREE<\/strong>&nbsp;shipping.<\/p>",
+          "undersubtitle": "",
+          "button_label": "",
+          "button_link": "",
+          "image": "shopify:\/\/shop_images\/Vee_Range_Flatlay_RGB_3024x1690_e2452834-77e0-4827-a3cb-b7f8bb66379b.jpg",
+          "focal_point": "center",
+          "color_border": "#d48e6f",
+          "layout": "left",
+          "text_align": "center",
+          "height": 550,
+          "parallax": false
         }
       }
     },
