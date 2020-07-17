@@ -3577,10 +3577,12 @@ lazySizesConfig.expFactor = 4;
           $(this.selectors.price + ' .actual-price').html(theme.Currency.formatMoney(variant.price, theme.settings.moneyFormat)).show();
   
           $('.afterpay-paragraph .afterpay-text1').html('Buy Now, Pay Later with ');
-      	$('.afterpay-paragraph .afterpay-instalments').remove();
-      $('.afterpay-paragraph .afterpay-text2').remove();
-      $('.afterpay-paragraph').addClass('show');
+          $('.afterpay-paragraph .afterpay-instalments').remove();
+          $('.afterpay-paragraph .afterpay-text2').remove();
+          $('.afterpay-paragraph').addClass('show');
           
+          
+
           // Sale price, if necessary
           if (variant.compare_at_price > variant.price) {
             $(this.selectors.comparePrice).html(theme.Currency.formatMoney(variant.compare_at_price, theme.settings.moneyFormat));
@@ -3588,11 +3590,13 @@ lazySizesConfig.expFactor = 4;
             $(this.selectors.price).addClass(classes.onSale);
             $(this.selectors.comparePriceA11y).attr('aria-hidden', 'false');
             $(this.selectors.priceA11y).attr('aria-hidden', 'false');
+            this.$container.find('.product__bundle').appendTo($(this.selectors.comparePrice).parent())
           } else {
             $(this.selectors.priceWrapper).addClass(classes.hidden);
             $(this.selectors.price).removeClass(classes.onSale);
             $(this.selectors.comparePriceA11y).attr('aria-hidden', 'true');
             $(this.selectors.priceA11y).attr('aria-hidden', 'true');
+            this.$container.find('.product__bundle').appendTo($(this.selectors.price))
           }
         }
       },

@@ -89,12 +89,18 @@
               aria-hidden="{{ hide_sale_price }}">
                 {{ 'products.general.regular_price' | t }}
             </span>
-            <span class="product__price-wrap-{{ section.id }}{% if hide_sale_price %} hide{% endif %}">
+            <span class="product__price-wrap-{{ section.id }}{% if hide_sale_price %} hide{% endif %} product__compare_parent">
               <span id="ComparePrice-{{ section.id }}" class="product__price product__price--compare">
                 {% if current_variant.compare_at_price > current_variant.price %}
                   {{ current_variant.compare_at_price | money }}
                 {% endif %}
               </span>
+              {% if current_variant.compare_at_price > current_variant.price %}
+                {% assign bundle_msg_shown = true %}
+                <span class="product__bundle">{{ section.settings.bundle_text }}</span>
+              {% else %}
+                {% assign bundle_msg_shown = false %}
+              {% endif %}
             </span>
             <span id="ComparePriceA11y-{{ section.id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           {% else %}
@@ -104,6 +110,9 @@
           <span id="ProductPrice-{{ section.id }}"
             class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}">
             <span class="actual-price">{{ current_variant.price | money }}</span>
+            {% if bundle_msg_shown == false %}
+              <span class="product__bundle">{{ section.settings.bundle_text }}</span>
+            {% endif %}
           </span>
 
           <div class="product__unit-price product__unit-price-wrapper--{{ section.id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
