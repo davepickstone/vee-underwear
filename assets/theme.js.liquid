@@ -3590,13 +3590,13 @@ lazySizesConfig.expFactor = 4;
             $(this.selectors.price).addClass(classes.onSale);
             $(this.selectors.comparePriceA11y).attr('aria-hidden', 'false');
             $(this.selectors.priceA11y).attr('aria-hidden', 'false');
-            this.$container.find('.product__bundle').appendTo($(this.selectors.comparePrice).parent())
+            this.$container.find('.product__bundle').appendTo($(this.selectors.comparePrice).parent());
           } else {
             $(this.selectors.priceWrapper).addClass(classes.hidden);
             $(this.selectors.price).removeClass(classes.onSale);
             $(this.selectors.comparePriceA11y).attr('aria-hidden', 'true');
             $(this.selectors.priceA11y).attr('aria-hidden', 'true');
-            this.$container.find('.product__bundle').appendTo($(this.selectors.price))
+            this.$container.find('.product__bundle').appendTo($(this.selectors.price));
           }
         }
       },
