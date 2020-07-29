@@ -4670,6 +4670,14 @@ $color-blankstate-background: #f4f4f4;
   }
 }
 
+.template-collection {
+  .section-header {
+    @include media-query($small) {
+      margin-top: 30px;
+    }
+  }
+}
+
 .section-header--collection-switcher {
   margin-bottom: 0;
   @include media-query($medium-up) {
@@ -7623,7 +7631,7 @@ $z-index-hero-text: 4;
 
 $collectionHeroLarge: 550px;
 
-$collectionHeroSmall: 330px;
+$collectionHeroSmall: 250px;
 
 .collection-hero {
   position: relative;
@@ -10063,7 +10071,7 @@ iframe.zoid-component-frame {
 }
 
 .product__price--compare {
-  padding-right: 5px;
+  padding-right: 2px;
   display: inline-block;
   text-decoration: line-through;
 }

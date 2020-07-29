@@ -111,7 +111,7 @@
             class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}">
             <span class="actual-price">{{ current_variant.price | money }}</span>
             {% if bundle_msg_shown == false %}
-              <span class="product__bundle">{{ section.settings.bundle_text }}</span>
+            	<span class="product__bundle">{{ section.settings.bundle_text }}</span>
             {% endif %}
           </span>
 

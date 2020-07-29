@@ -105,6 +105,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "show_breadcrumbs": false,
+    "show_sale_pricing": false,
     "checkout_header_image": "shopify:\/\/shop_images\/Opt-3.jpg",
     "checkout_logo_image": "shopify:\/\/shop_images\/VeeUnderwear_LockUp_White_small_6087a452-2398-4586-bdc4-61e1711a4776.png",
     "checkout_logo_position": "center",
@@ -217,35 +218,35 @@
           "1594714477544": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/breathable.png",
+              "image": "shopify:\/\/shop_images\/1_4cfbb80c-165e-4358-acbf-d1a86edf7d0f.png",
               "link": ""
             }
           },
           "1594714484981": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/antibacterial.png",
+              "image": "shopify:\/\/shop_images\/2_24d60cd0-3566-4f89-a082-d6682c4d89a6.png",
               "link": ""
             }
           },
           "1594714490988": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/antifungal.png",
+              "image": "shopify:\/\/shop_images\/3_980ff304-3a23-484f-9b47-bb2e74e63929.png",
               "link": ""
             }
           },
           "1594714497356": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/moisture-wicking.png",
+              "image": "shopify:\/\/shop_images\/4_bdc1221a-8d06-49df-ac30-eec6f50a5602.png",
               "link": ""
             }
           },
           "1594714504037": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/odour-resistant.png",
+              "image": "shopify:\/\/shop_images\/5_8bf956e8-fda7-4340-ab8d-ca04d8ba17fc.png",
               "link": ""
             }
           }
@@ -265,7 +266,8 @@
           "description_position": "hide",
           "collection_subnav_style": "none",
           "collection_tags_style": "none",
-          "collection_sort_enable": false
+          "collection_sort_enable": false,
+          "bg_color": "#404042"
         }
       },
       "product-template": {
@@ -988,6 +990,21 @@
               "title": "I've got a PR\/media enquiry?",
               "text": "<p>Love those. Shoot through an email <strong>info@veeunderwear.com<\/strong><\/p>"
             }
+          },
+          "1595325052980": {
+            "type": "rich-text",
+            "settings": {
+              "title": "CONTACT",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1595325069430": {
+            "type": "question",
+            "settings": {
+              "title": "Contact info",
+              "text": "<p>GF@veeunderwear.com<\/p>\n<p>251 Johnston Street Abbotsford, VIC 3067<\/p>"
+            }
           }
         },
         "block_order": [
@@ -1011,7 +1028,9 @@
           "1593921507004",
           "1593921572499",
           "1593921625399",
-          "1593921656986"
+          "1593921656986",
+          "1595325052980",
+          "1595325069430"
         ],
         "settings": {
           "page_title_enable": false,
