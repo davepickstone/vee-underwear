@@ -105,6 +105,7 @@
             <span id="ComparePriceA11y-{{ section.id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
           {% else %}
             <span id="PriceA11y-{{ section.id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            {% assign bundle_msg_shown = false %}
           {% endif %}
 
           <span id="ProductPrice-{{ section.id }}"

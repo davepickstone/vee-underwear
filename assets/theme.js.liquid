@@ -6234,6 +6234,13 @@ lazySizesConfig.expFactor = 4;
       $('.afterpay-paragraph').addClass('show');
     }, 100);
 
+    setTimeout(function() {
+      $('.afterpay-paragraph .afterpay-text1').html('Buy Now, Pay Later with ');
+      $('.afterpay-paragraph .afterpay-instalments').remove();
+      $('.afterpay-paragraph .afterpay-text2').remove();
+      $('.afterpay-paragraph').addClass('show');
+    }, 500);
+
     $('.btn-to-size-guide').on('click', function(evt) {
       evt.preventDefault();
 
