@@ -8,7 +8,7 @@ Black -> Beige
   {% comment %} 12 {% endcomment %}
   {%- assign has_selected = false -%}
   {%- for variant in product.variants -%}
-    {%- if variant.inventory_quantity < 0 -%}
+    {%- if variant.inventory_quantity < 1 -%}
       {%- continue -%}
     {%- endif -%}
     {%- if variant.option1 == "12" and variant.option2 == "Black" -%}
@@ -19,7 +19,7 @@ Black -> Beige
   {%- endfor -%}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "12" and variant.option2 == "Beige" -%}
@@ -33,7 +33,7 @@ Black -> Beige
   {% comment %} 10s {% endcomment %}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "10" and variant.option2 == "Black" -%}
@@ -45,7 +45,7 @@ Black -> Beige
   {%- endif -%}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "10" and variant.option2 == "Beige" -%}
@@ -59,7 +59,7 @@ Black -> Beige
   {% comment %} 8s {% endcomment %}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "8" and variant.option2 == "Black" -%}
@@ -71,7 +71,7 @@ Black -> Beige
   {%- endif -%}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "8" and variant.option2 == "Beige" -%}
@@ -85,7 +85,7 @@ Black -> Beige
   {% comment %} 14s {% endcomment %}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "14" and variant.option2 == "Black" -%}
@@ -97,7 +97,7 @@ Black -> Beige
   {%- endif -%}
   {%- if has_selected == false -%}
     {%- for variant in product.variants -%}
-      {%- if variant.inventory_quantity < 0 -%}
+      {%- if variant.inventory_quantity < 1 -%}
         {%- continue -%}
       {%- endif -%}
       {%- if variant.option1 == "14" and variant.option2 == "Beige" -%}

@@ -151,8 +151,8 @@
           "sticky_collection": false,
           "type_navigation_size": 14,
           "type_navigation_style": false,
-          "show_announcement": true,
-          "announcement_text": "<p><strong>FREE<\/strong> shipping on all AUS orders during COVID-19<\/p>",
+          "show_announcement": false,
+          "announcement_text": "<p><strong>FREE<\/strong> shipping on&nbsp;orders over $50<\/p>\n<p><strong>AFTERPAY<\/strong> AVAILABLE&nbsp;<\/p>",
           "announcement_link": "",
           "announcement_closable": false
         }
@@ -309,7 +309,7 @@
         "type": "featured-collection-switcher",
         "settings": {
           "title": "Eco-friendly Bamboo Underwear",
-          "collection1": "eco-friendly-bamboo-underwear",
+          "collection1": "shop-all",
           "collection2": "",
           "per_row": 3,
           "view_all": false,
@@ -1101,6 +1101,37 @@
           "text_align": "center",
           "height": 550,
           "parallax": false
+        }
+      },
+      "page-sections-template-2": {
+        "type": "page-sections-template-2",
+        "blocks": {
+          "1596244467534": {
+            "type": "custom-html",
+            "settings": {
+              "full_width": true,
+              "space_around": true,
+              "code": "<div class=\"text-center\">\n<div id=\"vsscript_70352_555530\"><\/div>\n<script async=\"\" type=\"text\/javascript\" src=\"https:\/\/app.viralsweep.com\/vsa-widget-f87a3e-70352.js?sid=70352_555530\"><\/script>\n<\/div>"
+            }
+          },
+          "1596244476206": {
+            "type": "featured-collection",
+            "settings": {
+              "title": "ECO-FRIENDLY BAMBOO UNDERWEAR",
+              "collection": "",
+              "per_row": 3,
+              "rows": 1,
+              "view_all": true
+            }
+          }
+        },
+        "block_order": [
+          "1596244467534",
+          "1596244476206"
+        ],
+        "settings": {
+          "page_title_enable": false,
+          "page_content_enable": true
         }
       }
     },
