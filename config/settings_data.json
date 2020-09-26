@@ -77,7 +77,7 @@
     "product_contact_show_phone": false,
     "enable_product_reviews": true,
     "reviews_layout": "expandable",
-    "bundle_text": "<p>BUNDLE 5 FOR $85 AND&nbsp;<strong>SAVE $14.75 +&nbsp;&nbsp;FREE SHIPPING<\/strong>.&nbsp;JUST ADD THE CODE <strong>5FOR85<\/strong> AT CHECKOUT.<\/p>",
+    "bundle_text": "<p>BUNDLE 5 FOR $85 AND&nbsp;<strong>SAVE $14.75 +&nbsp;&nbsp;FREE SHIPPING<\/strong>. JUST ADD THE CODE <strong>5FOR85<\/strong> AT CHECKOUT.<\/p>",
     "afterpay_text": "<p>Buy&nbsp;Now, Pay Later with<\/p>",
     "cart_type": "drawer",
     "cart_icon": "cart",
@@ -1111,7 +1111,32 @@
             "settings": {
               "full_width": true,
               "space_around": true,
-              "code": "<div class=\"text-center\">\n<div id=\"vsscript_70352_555530\"><\/div>\n<script async=\"\" type=\"text\/javascript\" src=\"https:\/\/app.viralsweep.com\/vsa-widget-f87a3e-70352.js?sid=70352_555530\"><\/script>\n<\/div>"
+              "code": "<div class=\"viral-sweep-container\">\n<div id=\"vsscript_72862_164953\"><\/div>\n<script async=\"\" type=\"text\/javascript\" src=\"https:\/\/app.viralsweep.com\/vsa-widget-c65e74-72862.js?sid=72862_164953\"><\/script>\n<\/div>"
+            }
+          },
+          "1599275095281": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "left",
+              "enable_image_1": true,
+              "image_1": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Healthy_Circle_RGB_100x100px_7c17f360-06e9-4c51-85b0-73015b89bc38.png",
+              "title_1": "HEALTHY",
+              "text_1": "<p>Made from eco-friendly bamboo which embodies natural properties that make the fabric antibacterial, antifungal, breathable, odour-resistant and moisture-wicking (woah). All these properties help to support a healthy lower region.<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Comfort_Circle_RGB_100x100px_88503e2d-3db4-4a03-80c6-ee063089d950.png",
+              "title_2": "COMFORTABLE",
+              "text_2": "<p>We don&rsquo;t believe in tight seams, relieving you of bad undie-symptoms like over-hanging. Best of all, bamboo fabric is soft, super soft. Our fabric also includes a little elastane, for the days you need some extra stretch (we&rsquo;ve all been there).<\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": true,
+              "image_3": "shopify:\/\/shop_images\/Vee_Icons_Thicker_Sustainable_Circle_RGB_100x100px_73e0eee2-2662-4000-b2cf-c8d69842c902.png",
+              "title_3": "SUSTAINABLE",
+              "text_3": "<p>Bamboo requires little water &amp; is the fastest growing plant in the world. Not to brag, but it also has no natural pests, which means it can grow without the use of any pesticides or herbicides. Oh, &amp; it&rsquo;s biodegradable&hellip; okay, now we&rsquo;re bragging.<\/p>",
+              "button_label_3": "",
+              "button_link_3": ""
             }
           },
           "1596244476206": {
@@ -1127,7 +1152,8 @@
         },
         "block_order": [
           "1596244467534",
-          "1596244476206"
+          "1596244476206",
+          "1599275095281"
         ],
         "settings": {
           "page_title_enable": false,
