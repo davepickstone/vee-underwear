@@ -22,8 +22,8 @@
           {% endif %}
           {% if block.settings.image != blank %}
             {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-            <img class="logo-bar__image"
-                src="{{ block.settings.image | img_url: '250x' }}"
+            <img class="logo-bar__image lazyload"
+                data-src="{{ block.settings.image | img_url: '250x' }}"
                 alt="{{ block.settings.image.alt }}">
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}

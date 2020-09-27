@@ -63,6 +63,10 @@
       <div class="quick-product__btn js-modal-open-quick-modal-{{ product.id }}" data-product-id="{{ product.id }}">
         <span class="quick-product__label">{{ settings.quick_shop_text }}</span>
       </div>
+    {% elsif settings.quick_shop_text != blank %}
+      <div class="quick-product__btn" data-product-id="{{ product.id }}">
+        <span class="quick-product__label">{{ settings.quick_shop_text }}</span>
+      </div>
     {% endif %}
 
     {%- assign fixed_aspect_ratio = false -%}
@@ -88,7 +92,7 @@
             {%- assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
             <img class="grid-product__image lazyload"
                 data-src="{{ img_url }}"
-                data-widths="[180, 360, 540, 720, 900, 1080]"
+                data-widths="[180, 360, 540, 720]"
                 data-aspectratio="{{ preview_image.aspect_ratio }}"
                 data-sizes="auto"
                 alt="{{ preview_image.alt | escape }}">
@@ -185,8 +189,8 @@
                 <a
                   href="{{ variant.url | within: collection }}"
                   class="color-swatch color-swatch--small"
-                  style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};">
-                </a>
+                  style="background-color: {{ color_swatch_fallback }};">
+                </a>{% comment %}to use image swatch add this to "style" above: background-image: url({{ color_image }}); {% endcomment %}
               {% endunless %}
              {% endfor %}
           </div>

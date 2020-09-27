@@ -5,7 +5,7 @@ if (console && console.log) {
 }
 
 window.lazySizesConfig = window.lazySizesConfig || {};
-lazySizesConfig.expFactor = 4;
+lazySizesConfig.expFactor = 2;
 
 (function($){
   var $ = jQuery = $;
@@ -5976,7 +5976,10 @@ lazySizesConfig.expFactor = 4;
   theme.init = function() {
     theme.setGlobals();
     theme.pageTransitions();
-    theme.initQuickShop();
+
+    if (theme.settings.quick_shop_enable) {
+      theme.initQuickShop();
+    }
     if (theme.settings.predictiveSearch) {
       theme.predictiveSearch.init();
     }
@@ -6177,7 +6180,9 @@ lazySizesConfig.expFactor = 4;
     }
 
     // Reload quick shop buttons
-    theme.initQuickShop(true);
+    if (theme.settings.quick_shop_enable) {
+      theme.initQuickShop(true);
+    }
 
     // Refresh reviews app
     if (window.SPR) {

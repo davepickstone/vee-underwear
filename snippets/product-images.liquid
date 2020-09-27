@@ -68,12 +68,18 @@
                     </span>
                   {%- endif -%}
 
-                  {%- assign img_url = media.preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  {% comment %}
+                    {%- assign img_url = media.preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
                   <img class="animation-delay-{{ forloop.index | times: 3 }} lazyload"
                       data-src="{{ img_url }}"
                       data-widths="[360, 540, 720, 900, 1080]"
                       data-aspectratio="{{ media.preview_image.aspect_ratio }}"
                       data-sizes="auto"
+                      alt="{{ media.alt | escape }}">
+                  {% endcomment %}
+                  <img class="animation-delay-{{ forloop.index | times: 3 }} lazyload"
+                      data-src="{{ media.preview_image | img_url: '120x' }}"
+                      data-aspectratio="{{ media.preview_image.aspect_ratio }}"
                       alt="{{ media.alt | escape }}">
                 </a>
               </div>

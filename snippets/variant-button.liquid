@@ -64,8 +64,8 @@
           <label
             for="ProductSelect-{{ section_id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
             class="color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
-            style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};"
-          >
+            style="background-color: {{ color_swatch_fallback }};"
+          > {% comment %}to use image swatch add this to "style" above: background-image: url({{ color_image }}); {% endcomment %}
             {{ value | escape }}
           </label>
         {% else %}
